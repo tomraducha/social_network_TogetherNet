@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.scss'
 import github from '../../images/github.png'
-import linkedin from  '../../images/linkedin.png'
+import linkedin from '../../images/linkedin.png'
 const Footer = () => {
     return (
         <div className="footer">
