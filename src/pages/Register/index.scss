@@ -1,0 +1,42 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+
+    padding: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .form-group {
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid black;
+        }
+    }
+
+    button {
+        margin-top: 30px;
+        padding: 10px 20px;
+        background-color: seashell;
+        color: slategray;
+        border: none;
+        cursor: pointer;
+        width: 120px;
+    }
+}
