@@ -37,7 +37,7 @@ export default function Navbar() {
                                 <NavLink to="/profile" className={(nav) => (nav.isActive ? "nav-active" : "")} >Profile</NavLink>
                             </li>
                             <li>
-                                <NavLink onClick={handleClick} className={(nav) => (nav.isActive ? "nav-active" : "")} >Deconnecter</NavLink>
+                                <NavLink onClick={handleClick} className="disconnect-link" >Déconnexion</NavLink>
                             </li>
                         </>
                     )}

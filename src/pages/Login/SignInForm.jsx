@@ -1,6 +1,7 @@
 import Cookies from "js-cookie";
 import React, { useState } from "react";
 import useFetch from "../../hooks/Usefetch/index"
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
     const [formData, setFormData] = useState({
@@ -8,14 +9,17 @@ export default function Login() {
         password: " ",
     });
 
-    function handleChange(e) {
+    const navigate = useNavigate();
+
+
+    const handleChange = (e) => {
         setFormData({
             ...formData,
             [e.target.id]: e.target.value,
         });
     }
 
-    async function handleSubmit(e) {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const sendData = {
             method: "POST",
@@ -29,17 +33,17 @@ export default function Login() {
         const token = await data.jwt
 
         Cookies.set("token", token)
-
+        navigate("/profile");
 
     }
 
     return (
         <div className="form-container">
             <form method="post" onSubmit={handleSubmit}>
-                <label>email</label>
+                <label>Mail</label>
                 <input type="email" id="identifier" onChange={handleChange} />
 
-                <label>password</label>
+                <label>Mot de passe</label>
                 <input type="password" id="password" onChange={handleChange} />
 
                 <input type="submit" />

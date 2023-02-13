@@ -49,7 +49,7 @@ export default function SignUpForm() {
             <form className="form" onSubmit={handleSubmit} id="sign-up-form">
                 {error && <div className="error">{error}</div>}
 
-                <label htmlFor="username">Username:</label>
+                <label htmlFor="username">Prénom</label>
                 <br />
                 <input
                     type="text"
@@ -57,7 +57,7 @@ export default function SignUpForm() {
                     onChange={handleChange}
                 />
                 <br />
-                <label htmlFor="email">Email:</label>
+                <label htmlFor="email">Mail</label>
                 <br />
                 <input
                     type="email"
@@ -65,7 +65,7 @@ export default function SignUpForm() {
                     onChange={handleChange}
                 />
                 <br />
-                <label htmlFor="password">Password:</label>
+                <label htmlFor="password">Mot de passe</label>
                 <br />
                 <input
                     type="password"
@@ -81,17 +81,15 @@ export default function SignUpForm() {
                     id="password-conf"
                     onChange={handleChange}
                 />
-                {/* <input type="checkbox" id="terms" />
+                <input type="checkbox" id="terms" />
                 <label htmlFor="terms">
                     J'accepte les{" "}
                     <a href="/" target="_blank" rel="noopener noreferrer">
                         conditions générales
                     </a>
-                </label> */}
+                </label>
                 <br />
-                <button type="submit" disabled={isLoading}>
-                    {isLoading ? "Loading..." : "Submit"}
-                </button>
+                <input type="submit" />
             </form>
         </div>
     );

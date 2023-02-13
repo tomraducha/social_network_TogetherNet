@@ -59,3 +59,14 @@ nav {
         font-weight: bold;
     }
 }
+
+.disconnect-link {
+    background-color: slategray;
+    border-radius: 10px;
+    color: white;
+}
+
+.disconnect-link:hover {
+    background-color: white;
+    color: slategray;
+}

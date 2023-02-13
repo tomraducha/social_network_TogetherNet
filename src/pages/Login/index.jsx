@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import SignInForm from './SignInForm'
 import SignUpForm from './SignUpForm'
 import './index.scss'
-export default function Login({ signin, signup }) {
-    const [signUpModal, setSignUpModal] = useState(signup)
-    const [signInModal, setSignInModal] = useState(signin)
+export default function Login() {
+    const [signUpModal, setSignUpModal] = useState(false)
+    const [signInModal, setSignInModal] = useState(true)
 
     const handleModals = (e) => {
         if (e.target.id === "register") {
