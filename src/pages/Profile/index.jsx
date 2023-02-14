@@ -1,37 +1,27 @@
-import { useEffect, useState } from 'react';
-import React from 'react'
-
-import './index.scss'
+import React from 'react';
+import { useUserData } from '../../atoms/UserData/index';
 import Cookies from 'js-cookie';
-import useFetch from '../../hooks/Usefetch/index';
+
+import './index.scss';
 
 export default function Profile() {
+    const token = Cookies.get('token');
+    const { data, isLoading, isError } = useUserData(token);
 
-    const token = Cookies.get("token");
-    const [data, setData] = useState({})
-    const [isLoading, setIsLoading] = useState(true)
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
 
-    useEffect(() => {
-        async function fetchData() {
+    if (isError) {
+        return (
+            <div>Une erreur est survenue lors de la récupération des données utilisateur.</div>
+        );
+    }
 
-            const sendData = {
-                method: "GET",
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            }
-            setData(await useFetch("http://localhost:1337/users/me", sendData))
-        }
-
-        fetchData()
-        setIsLoading(false)
-    }, [])
-    return isLoading ? (
-        "...loading"
-    ) : (
+    return (
         <>
             <div>Profile</div>
-            <h1>Bonjour {data.username}</h1>
+            <h1>Bonjour {data && data.username}</h1>
         </>
-    )
+    );
 }
