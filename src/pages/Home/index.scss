@@ -1,0 +1,77 @@
+.home main {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-form {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+}
+
+.post-form h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.post-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-form textarea {
+    height: 100px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.post-form button[type="submit"] {
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.post-form button[type="submit"]:hover {
+    background-color: #1e6ba8;
+}
+
+.posts {
+    margin: 1rem 0;
+}
+
+.posts ul {
+    list-style: none;
+}
+
+.posts ul li {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+}
+
+.posts ul li h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.posts ul li p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.posts ul li .meta {
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.posts ul li .meta .author {
+    margin-right: 1rem;
+}
